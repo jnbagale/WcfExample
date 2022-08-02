@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceClient", "WcfServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTestServer", "WcfTestServer\WcfTestServer.csproj", "{44732950-BA34-4C7A-89C9-DD1DC8320E11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfWeatherServer", "WcfWeatherServer\WcfWeatherServer.csproj", "{8FA255C3-28D3-475B-BA27-CF489C49C0D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfWeatherStation", "WcfWeatherStation\WcfWeatherStation.csproj", "{F105A49B-4A01-43DD-B27B-9763834F6A22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{44732950-BA34-4C7A-89C9-DD1DC8320E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44732950-BA34-4C7A-89C9-DD1DC8320E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44732950-BA34-4C7A-89C9-DD1DC8320E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA255C3-28D3-475B-BA27-CF489C49C0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA255C3-28D3-475B-BA27-CF489C49C0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA255C3-28D3-475B-BA27-CF489C49C0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA255C3-28D3-475B-BA27-CF489C49C0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F105A49B-4A01-43DD-B27B-9763834F6A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F105A49B-4A01-43DD-B27B-9763834F6A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F105A49B-4A01-43DD-B27B-9763834F6A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F105A49B-4A01-43DD-B27B-9763834F6A22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

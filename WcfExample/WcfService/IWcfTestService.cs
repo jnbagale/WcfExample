@@ -2,18 +2,11 @@
 
 namespace WcfService
 {
-    //[ServiceContract(CallbackContract = typeof(IContractCallback))]
     [ServiceContract]
     public interface IWcfTestService
     {
         [OperationContract]
-        object TestService(object param); // Used to test if the wcf service is ready
+        object TestService(object param);
 
     }
-
-    //public interface IContractCallback
-    //{
-
-    //}
-
 }

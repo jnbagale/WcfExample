@@ -6,17 +6,17 @@ namespace WcfServer
 {
     class Program
     {
-        static IWcfTestService serviceInstance;
+        static IWcfWeatherService serviceInstance;
         static void Main(string[] args)
         {
             Program prog = new Program();
 
-            prog.HostWcfTestService();
+            prog.HostWcfWeatherService();
         }
 
-        private void HostWcfTestService()
+        private void HostWcfWeatherService()
         {
-            string mutex_id = "WCF Service Example";
+            string mutex_id = "WCF Weather Service";
             using (Mutex mutex = new Mutex(false, mutex_id))
             {
                 if (!mutex.WaitOne(0, false))
@@ -25,19 +25,19 @@ namespace WcfServer
                     return;
                 }
 
-                int portNumber = 977;
+                int portNumber = 978;
                 string serverAddress = WcfHelper.GetLocalIP();
-                string serviceNme = "WcfService/TestService/";
+                string serviceNme = "WcfService/WeatherService/";
 
                 Host host = new Host();
 
-                serviceInstance = new WcfTestService();
+                serviceInstance = new WcfWeatherService();
 
-                if (host.HostTcpService(typeof(IWcfTestService), serviceInstance, serverAddress, portNumber.ToString(), serviceNme))
+                if (host.HostTcpService(typeof(IWcfWeatherService), serviceInstance, serverAddress, portNumber.ToString(), serviceNme))
                 {
-                    (serviceInstance as WcfTestService).Host = host;
+                    (serviceInstance as WcfWeatherService).Host = host;
 
-                 Console.WriteLine(string.Format("WCF Test service has been hosted at {0}:{1}\n", serverAddress, portNumber));
+                    Console.WriteLine(string.Format("WCF Test service has been hosted at {0}:{1}\n", serverAddress, portNumber));
                 }
                 else
                 {
@@ -52,9 +52,9 @@ namespace WcfServer
 
                 Console.WriteLine("Closing application..");
 
-                if ((serviceInstance as WcfTestService).Host != null && ((serviceInstance as WcfTestService).Host.IsOpen))
+                if ((serviceInstance as WcfWeatherService).Host != null && ((serviceInstance as WcfWeatherService).Host.IsOpen))
                 {
-                    (serviceInstance as WcfTestService).Host.Close();
+                    (serviceInstance as WcfWeatherService).Host.Close();
                 }
             }
         }
